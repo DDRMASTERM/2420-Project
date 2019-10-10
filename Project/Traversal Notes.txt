@@ -1,0 +1,22 @@
+Graph traversal:
+
+BST traversal: inorder traversal
+
+Linked List traversal: start at beginning and keep applying getNext
+
+Stack traversal: not a typical operation
+Queue traversal: same
+
+Hash table traversal: linear examination of buckets
+
+Heap traversal: not a typical operation.
+
+We need to be able to traverse graphs.
+Depth first search
+Breadth first search
+
+DFS rules:
+0: Put any vertex to start with. Visit it, mark it, and push its label onto the stack
+1: If possible, visit an unvisited adjacent vertex, mark it, and push its label onto a stack.
+2: If 1 is impossible, then pop a vertex of the stack, if possible.
+3: If 1 and 2 are impossible, you are done.

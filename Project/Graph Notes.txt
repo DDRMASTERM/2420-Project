@@ -1,0 +1,60 @@
+Graphs:
+
+Df. An undirected graph consists of elements called vertices and a set of unordered pairs of vertices (called edges).
+Df. Two vertcies are adjacent if they form an edge. 
+Df. A graph is complete if all the vertices are adjacent.
+Df. A path is a sequence of vertices such that consecutive vertices are adjacent.
+Df. A circuit is a path that's closed.
+
+We use graphs to model relationships.
+Ex. We can model the upper level routers in the US.
+Vertices are the 13 top routers in the US
+
+We have an edge between two vertices when there's a high bandwidth optical cable between two of them.
+
+You might make a model if you wanted to do a vulnerability analysis.
+
+Df. The degree of a vertex is the number of edges incident to it.
+Df. A vertex whose removal would disconnect the graph is called an articulation point.
+Df. A bridge is an edge whose removal would disconnect the graph.
+
+in our model, we could remove 4 edges withou disconnecting the graph. The graph we have left 
+is called a minimal spanning tree.
+
+Df. A network is a graph with weighted edges.
+Ex, a roadmap: vertices represent locations. Edges represent a road that goes from one location to another.
+Weights: distance between the two locations.
+
+How do we represent graphs in a computer
+
+Adjacency Matrix: label the rows and columns with the vertices . If there's an edge between two vertices we put a 1. 
+Otherwise, we put a 0.
+
+Adjacency List: for every vertex, thist the vertices it's connected to.
+
+When should we use which data structure?
+
+Use an adjacency matrix if the number of edges is large compared to the number of vertices. (i.e. ther are 
+a lot of ones.)
+
+Use an adjacency list if if the number of vertices is large compared to the number of edges.
+(For example, if there are 1 billion vertices and only 1000 edges).
+
+Very famous graph model: the web graph.
+
+Vertices are web pages.
+Edges are directed and represent links between two pages.
+
+Size of the web graph:
+10 billion vertices.
+10 links per page. 100 billion links.
+
+Consider a matrix:
+It has 10 billion rows and 10 billion columns.
+Each row has 10 billion spaces. All are 0 except for 10.
+
+How much space if we use a matrix?
+10^10x10^10=10^20. If we use a byte for every matrix cell. A terabyte is 10^12 bytes. We need 10^8.
+
+Adj. list: 10^10x10=10^11. Fit it all into one HD.
+Google makes big money on the web graph.
